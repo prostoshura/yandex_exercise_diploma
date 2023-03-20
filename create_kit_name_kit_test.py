@@ -6,7 +6,7 @@ def get_get_request_an_order(track):
     # копирование словаря с телом запроса из url, чтобы не потерять данные в исходном словаре
     current_order_request = sender_stand_request.get_request_an_order()
     # изменение значения в поле track
-    current_order_request['track'] = track
+    current_order_request["track"] = track
     # Возвращается новый словарь с нужным значением track
     return current_order_request
 
@@ -21,7 +21,7 @@ def positive_assert(order_track):
 # Проверяется, что код ответа равен 200
     assert user_response.status_code == 200
     # Проверяется, что в ответе значение track соответствует track в запросе
-    assert user_response.json()['track'] == order_track
+    assert user_response.json()["track"] == order_track
     # Проверяется полный ответ на запрос
     print(user_response.json())
 

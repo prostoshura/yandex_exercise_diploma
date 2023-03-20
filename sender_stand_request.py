@@ -25,11 +25,11 @@ print(response.json())
 def get_new_order_track():  # Запрос на создание заказа
     order_body = body.Make_an_order
     resp_order = post_new_order(body.Make_an_order)
-    return resp_order.json()['track']  # Возврат запроса, запомнить трек Заказа
+    return resp_order.json()["track"]  # Возврат запроса, запомнить трек Заказа
 
 
 def get_request_an_order():  # Запрос на поиск заказа по его трек номеру
-    return requests.get(url.url+url.Get_an_order_number+get_new_order_track()['track'])
+    return requests.get(url.url+url.Get_an_order_number+get_new_order_track()["track"])
 
 
 print(response.json())
